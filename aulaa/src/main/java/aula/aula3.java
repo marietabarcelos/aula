@@ -1,8 +1,6 @@
-package aula02;
+package aula;
 
 import java.io.IOException;
-import java.io.PrintWriter;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -10,16 +8,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class ServletMeuNome
+ * Servlet implementation class aula3
  */
-@WebServlet("/ServletMeuNome")
-public class ServletMeuNome extends HttpServlet {
+@WebServlet("/aula3")
+public class aula3 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ServletMeuNome() {
+    public aula3() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -28,11 +26,8 @@ public class ServletMeuNome extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		PrintWriter saida = response.getWriter();
-
-		saida.write("<HTML><BODY>Mariêta Caroline Barcelos Silva de Alcantara</BODY></HTML>");
-
-		saida.close();
+		// TODO Auto-generated method stub
+		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
 	/**
@@ -40,7 +35,7 @@ public class ServletMeuNome extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-				response.getWriter().append("Served at: ").append(request.getContextPath());
+		doGet(request, response);
 	}
 
 }
